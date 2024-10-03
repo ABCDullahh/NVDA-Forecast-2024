@@ -10,7 +10,7 @@ NVDA is one of the most popular and volatile stocks in the technology sector. In
 - **Supporting Trading Decisions:** Providing guidance for traders on potential future price movements.
 - **Minimizing Investment Risks:** Helping investors reduce risk and increase profitability by understanding key trends.
 
-This project uses Prophet to model the time series data and evaluate its accuracy using **Mean Absolute Error (MAE)** and **Root Mean Squared Error (RMSE)**.
+This project uses Prophet to model the time series data and evaluate its accuracy using **Mean Absolute Error (MAE)**.
 
 ## Table of Contents
 
@@ -51,7 +51,7 @@ Prophet is a robust forecasting model from Facebook designed for time series dat
    - **changepoint_prior_scale (CPS):** Controls flexibility in detecting trend changes.
    - **seasonality_prior_scale (SPS):** Adjusts sensitivity to seasonal patterns.
    - **holidays_prior_scale (HPS):** Handles the effect of holidays on the stock price.
-4. **Evaluation Metrics:** We use **MAE** and **RMSE** to measure model accuracy.
+4. **Evaluation Metrics:** We use **MAE** to measure model accuracy.
 
 ### Key Parameters:
 - **CPS = 0.06**: Sufficiently flexible in capturing trend changes.
@@ -63,7 +63,6 @@ Prophet is a robust forecasting model from Facebook designed for time series dat
 The model effectively captures the **long-term trends** of NVDA's stock price movements. While Prophet struggled with short-term volatility, the forecasted **trend direction** aligns with the actual data, making it useful for long-term investment strategies.
 
 - **MAE:** Measures the average absolute deviation between predicted and actual values.
-- **RMSE:** Highlights significant errors, offering more insight into large prediction deviations.
 
 ### Key Insights:
 - **Rolling Mean and Changepoints:** Prophet successfully identifies key changepoints in the stock trend, aided by careful parameter tuning.
